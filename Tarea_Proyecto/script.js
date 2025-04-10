@@ -33,8 +33,46 @@ while (InicioDeTodo == true) {
                 alert(`Datos del Camper:\nNombre: ${datosCamper.Nombre}\nApellido: ${datosCamper.Apellido}\nCorreo: ${datosCamper.Correo}\nContraseña: ${datosCamper.Contraseña}`);
                 console.log("Datos del Camper:");
                 console.log(datosCamper);
+                InicioCamper = true;
+                while (InicioCamper == true) {
+                    let opcionCamper = prompt("Selecciona una opcion :\n1. Ver Notas\n2. Ver Estado\n3. Ver Salon\n4. Salir");
+                    if (opcionCamper == 1) {
+                        alert("Ver Notas");
+
+                    } else if (opcionCamper == 2) {
+                        alert("Ver Estado");
+
+                    } else if (opcionCamper == 3) {
+                        alert("Ver Salon");
+
+                    } else if (opcionCamper == 4) {
+                        alert("Saliendo de la sección Camper...");
+                        InicioCamper = false;
+                    } else {
+                        alert("Opción no válida");
+                    }
+                }
             } else if (usuario == 2) {
                 alert("Iniciando sesion...");
+                InicioCamper = true;
+                while (InicioCamper == true) {
+                    let opcionCamper = prompt("Selecciona una opcion :\n1. Ver Notas\n2. Ver Estado\n3. Ver Salon\n4. Salir");
+                    if (opcionCamper == 1) {
+                        alert("Ver Notas");
+
+                    } else if (opcionCamper == 2) {
+                        alert("Ver Estado");
+
+                    } else if (opcionCamper == 3) {
+                        alert("Ver Salon");
+
+                    } else if (opcionCamper == 4) {
+                        alert("Saliendo de la sección Camper...");
+                        InicioCamper = false;
+                    } else {
+                        alert("Opción no válida");
+                    }
+                }
             } else {
                 alert("Opción no válida");
             }
