@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+  <div class="pokedex">
+    <div class="pantalla">
+      <img id="pokemonImage" src="" alt="Pokemon" />
+    </div>
+    <div class="info">
+      <h2><span id="pokemonId">#</span> - <span id="pokemonName">Cargando...</span></h2>
+    </div>
+    <input type="text" id="searchInput" placeholder="Nombre o número" />
+    <div class="botones">
+      <button onclick="getNextPokemon()">Anterior &lt;</button>
+      <button onclick="getPrevPokemon()">Siguiente &gt;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
