@@ -19,17 +19,19 @@ body {
   }
   
   .pantalla {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     width: 160px;
     height: 160px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
   }
   
   .pantalla img {
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
   }
   
   .info {
