@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,28 @@
     <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg">
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
     <main>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/6.gif" alt="" class="pokemon_gif">
-        <img class="pokedex" src="./img/pokedex .png" >
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/6.gif"
+            alt="" class="pokemon_gif">
+        <img class="pokedex" src="./img/pokedex .png">
 
         <h1 class="pokemon_data">
             <span class="pokeman_number">6</span> -
             <span class="pokemon_name">charizard</span>
         </h1>
-        <form></form>
+        <form class="form">
+            <input type="search" class="input_search" placeholder="Name Or Number" required>
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-prev">Prev &lt;</button>
+            <button class="button btn-next">Next &lt;</button>
+        </div>
+
     </main>
 </body>
-<script src="./script/script.js"></script>
+<script src="./scripts/script.js"></script>
+
 </html>
