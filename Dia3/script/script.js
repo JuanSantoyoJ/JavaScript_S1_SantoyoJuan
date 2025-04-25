@@ -65,4 +65,76 @@ async function drawCard() {
 function updateScores(){
     const playerScore = calculateScore(playerCards);
     playerScoreText.textContent = `Puntos: ${playerScore}`;
+
+    const visibleDealerCards = dealerCards.filter(card => !card.hidden);
+    const dealerScore = calculateScore(visibleDealerCards);
+    dealerScoreText.textContent = `Puntos: ${dealerScore}`;
+
+    if (playerScore > 21){
+        resultContainer.textContent = "Perdiste!";
+        endGame();
+    }
 }
+
+function endGame(){
+    hitButton.disabled = true;
+    standButton.disabled = true;
+}
+
+function revealDealerCards(){
+    dealerCardContainer.innerHTML = "";
+    for (const card of dealerCards){
+        const img = document.createElement("img");
+        img.src = card.image;
+        dealerCardContainer.appendChild(img);
+        card.hidden = false;
+    }
+    updateScores();
+}
+function dealerTurn(){
+    revealDealerCards();
+
+    let dealerScore = calculateScore(dealerCards);
+
+    const drawUntil = async () => {
+        while (dealerScore < 17){
+            await drawCard(false);
+            dealerScore = calculateScore(dealerCards);
+        }
+
+        const playerScore = calculateScore(playerCards);
+        if (dealerScore > 21 || playerScore > dealerScore){
+            resultText.textContent = "Ganaste!";
+        } else if (playerScore < dealerScore){
+            resultText.textContent = "Perdiste!";
+        } else {
+            resultText.textContent = "Empate!";
+        }
+        endGame();
+    };
+    drawUntil();
+}
+function startGame(){
+    playerCards = [];
+    dealerCards = [];
+    playerCardContainer.innerHTML = "";
+    dealerCardContainer.innerHTML = "";
+    resultContainer.textContent = "";
+
+    hitButton.disabled = false;
+    standButton.disabled = false;
+
+    playerScoreText.textContent = "";
+    dealerScoreText.textContent = "";
+
+    drawCard(true);
+    drawCard(true);
+
+    drawCard(false);
+    drawCard(false, true);
+}
+
+hitButton.addEventListener('cick', () => drawCard(true));
+standButton.addEventListener('click', dealerTurn);
+
+fetchDeck();
