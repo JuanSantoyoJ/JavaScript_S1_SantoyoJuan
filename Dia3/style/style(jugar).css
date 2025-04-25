@@ -1,0 +1,20 @@
+body{
+    background-image: url(../img/fondo.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.img_BlackJack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icono_BJ{
+    width: 30%;
+    height: 30%;
+}
