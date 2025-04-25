@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style(jugar).css">
-    <title>Jugar</title>
+    <title>Document</title>
 </head>
+
 <body>
     <div class="img_BlackJack">
-        <img class="icono_BJ" src="./img/icono_BJ.png" alt="">
+        <img class="icono_BJ" src="./img/logo.webp" alt="">
     </div>
-    <h1>Tus Cartas</h1>
-    <div class="hand" id="player-cards"></div>
-    <p id="player-score"></p>
+    <div class="cuadro_juego">
+        <h1>Juego de Carta Mayor 🃏</h1>
 
-    <h1>Cartas de la maquina</h1>
-    <div class="hand" id="dealer-cards"></div>
-    <p id="dealer-score"></p>
+        <div class="hand" id="card-container">
+            <div>
+                <h3>Jugador</h3>
+                <img id="player-card" src="" alt="" />
+            </div>
+            <div>
+                <h3>Máquina</h3>
+                <img id="machine-card" src="" alt="" />
+            </div>
+        </div>
 
-    <button id="hit-button">Pedir Carta</button>
-    <button id="stand-button">Plantarse</button>
-    <p id="result"></p>
+        <button onclick="playRound()">Sacar Cartas</button>
 
+        <p id="result"></p>
+    </div>
     <script src="./script/script.js"></script>
 </body>
+
 </html>

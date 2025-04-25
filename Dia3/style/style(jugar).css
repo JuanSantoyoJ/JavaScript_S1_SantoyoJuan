@@ -18,3 +18,9 @@ a{
     width: 30%;
     height: 30%;
 }
+.cuadro_juego{
+    width: 10%;
+    height: 20vh;
+    background-color: rgb(26, 85, 26);
+    
+}
