@@ -17,55 +17,54 @@
           </div>
           <div class="card-body">
             <h4 class="mb-4">Gestión de Héroes</h4>
-            <form>
+            <form id="formularioHeroe">
               <div class="row mb-3">
                 <div class="col-md-6">
                   <label for="nombrePersonaje" class="form-label">Nombre Personaje</label>
-                  <input type="text" class="form-control" id="nombrePersonaje">
+                  <input type="text" class="form-control bg-light" id="personaje">
                 </div>
                 <div class="col-md-6">
                   <label for="nombreActor" class="form-label">Nombre Actor</label>
-                  <input type="text" class="form-control" id="nombreActor">
+                  <input type="text" class="form-control bg-light" id="actor">
                 </div>
               </div>
       
               <div class="row mb-3">
                 <div class="col-md-6">
                   <label for="edadActor" class="form-label">Edad Actor</label>
-                  <input type="number" class="form-control" id="edadActor">
+                  <input type="number" class="form-control bg-light" id="edad">
                 </div>
                 <div class="col-md-6">
                   <label for="ubicacion" class="form-label">Ubicación</label>
-                  <input type="text" class="form-control" id="ubicacion" placeholder="Nombre de la ciudad de origen">
+                  <input type="text" class="form-control bg-light" id="ubicacion" placeholder="Nombre de la ciudad de origen">
                 </div>
               </div>
       
               <div class="row mb-3">
                 <div class="col-md-6">
                   <label for="poster" class="form-label">Poster</label>
-                  <input type="text" class="form-control" id="poster">
+                  <input type="text" class="form-control bg-light" id="poster">
                 </div>
                 <div class="col-md-6">
-                  <label for="fecha" class="form-label">Ubicación</label>
-                  <input type="text" class="form-control" id="fecha" placeholder="dd/mm/yyyy">
+                  <label for="fecha" class="form-label">Fecha</label>
+                  <input type="date" class="form-control bg-light" id="fecha" placeholder="dd/mm/yyyy">
                 </div>
               </div>
       
               <div class="mb-3">
                 <label for="productora" class="form-label">Productora</label>
-                <select class="form-select" id="productora">
+                <select class="form-select bg-light" id="productora">
                   <option selected>Marvel</option>
                   <option>DC</option>
                   <option>Otro</option>
                 </select>
               </div>
       
-              <div class="d-flex justify-content-between">
+
+              <div class="d-flex justify-content-start gap-3">
                 <button type="button" class="btn btn-dark">Nuevo Héroe</button>
-                <div>
-                  <button type="submit" class="btn btn-primary">Guardar Héroe</button>
-                  <button type="button" class="btn btn-danger">Cancelar</button>
-                </div>
+                <button type="submit" class="btn btn-primary">Guardar Héroe</button>
+                <button type="button" class="btn btn-danger">Cancelar</button>
               </div>
       
             </form>
@@ -74,4 +73,5 @@
       </div>
     
   </body>
+  <script src="./scripts/script.js"></script>
 </html>
