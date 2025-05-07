@@ -9,7 +9,14 @@ async function GetApi() {
         throw error; 
     }
 }
+async function Traje(){
+    try{
 
+    } catch(error){
+        console.error('Error al obtener datos:', error);
+        throw error; 
+    }
+}
 
 async function agregarHeroe(event) {
     event.preventDefault();
@@ -62,3 +69,23 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('No se encontró el formulario');
     }
 });
+const botonTraje = document.getElementById('btn-traje');
+botonTraje.addEventListener('click', TrajeDIV);
+
+const div_trajes = document.getElementById('div_trajes');
+async function TrajeDIV(){
+    div_trajes.innerHTML = 
+    `
+    <div class="container mt-5 mb-5">
+    <div class="card">
+      <div class="card-header">
+        <h2> Registro de trajes</h2>
+      </div>
+      <div class="card-body">
+        <h4 class="mt-5 text-primary">Trajes del personaje</h4>
+        <p class="fs-5 text-primary">En esta seccion podra registrar  los nombres de los trajes usados por el actor en cada una de las peliculas.</p>
+      </div>
+    </div>
+  </div>
+`;
+}
